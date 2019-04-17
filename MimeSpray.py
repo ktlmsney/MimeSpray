@@ -105,5 +105,7 @@ if __name__ == "__main__":
     try:      
         for email in f:
             MimeSpray(email, args.password, args.app_id, args.auth_type, args.outfile)
+    except as e:
+        print(e)
     finally:
         f.close()              
